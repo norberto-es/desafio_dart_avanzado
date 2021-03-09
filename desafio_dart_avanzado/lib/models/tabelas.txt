@@ -1,0 +1,28 @@
+create database catastro
+
+CREATE TABLE 'catastro'.'paises' (
+   'id' INT NOT NULL,
+   'nome' VARCHAR(45) NULL,
+   PRIMARY KEY ('id'));
+
+
+CREATE TABLE 'catastro'.'regiones' (
+  'id' INT NOT NULL,
+  'nome' VARCHAR(45) NULL,
+  'sigla' VARCHAR(2) NULL,
+  'pais' INT NOT NULL,
+  PRIMARY KEY ('id'));
+
+CREATE TABLE 'catastro'.'estados' (
+  'id' INT NOT NULL,
+  'nome' VARCHAR(45) NULL,
+  'sigla' VARCHAR(2) NULL,
+  'region' INT NOT NULL, 
+  PRIMARY KEY ('id'));
+
+
+CREATE TABLE 'catastro'.'ciudades (
+  'id' INT NOT NULL,
+  'nome' VARCHAR(100) NULL,
+  'estado' INT NOT NULL, 
+  PRIMARY KEY ('id'));
